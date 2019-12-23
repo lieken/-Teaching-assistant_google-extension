@@ -10,6 +10,8 @@ var getSelectedTab = (tab) => {
   document.getElementById('hide_childbt1').addEventListener('click', () => sendMessage({ action: 'Hide_Childbt1' }));
   document.getElementById('reset_childbt1').addEventListener('click', () => sendMessage({ action: 'Reset_Childbt1' }));
   
+  document.getElementById('mission').addEventListener('click', () => sendMessage({ action: 'Mission' }));
+
   document.getElementById('test').addEventListener('click', () => sendMessage({ action: 'Test' }));
   document.getElementById('reset_test').addEventListener('click', () => sendMessage({ action: 'Reset_Test' }))
 

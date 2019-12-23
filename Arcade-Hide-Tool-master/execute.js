@@ -21,6 +21,9 @@ const onMessage = (message) => {
       Reset_Childbt1();
         break;
 //
+    case 'Mission':
+      Mission();
+       break;
     case 'Test':
         Test();
         break;
@@ -93,6 +96,24 @@ const Hide_Childbt1 = () => {
 
  };
 
+ function Mission(){
+  console.log("mission")
+  $("#Question").remove();
+
+  var target = $("div.right.menu");
+  function genQuestionHTML(q){
+    var html = `
+      <p id="Question"; style="position: fixed; top: 0.5rem; right: 0.5rem; background-color: white; padding: 1rem; border-radius: 1rem">${q}</p>
+    `
+    return html;
+  }
+
+  target.append(genQuestionHTML('Hello Test Question'))
+
+  
+  console.log(target)
+};
+
 
 //測試
 const Test = () => {
@@ -101,7 +122,7 @@ const Test = () => {
   var target = $("div#maineditor");
   function genQuestionHTML(q){
     var html = `
-      <div id="Question"; style="position: fixed; z-index:43; top: 0.5rem; right: 0.5rem; background-color: white; padding: 1rem; border-radius: 1rem">${q}</div>
+      <div id="Question"; style="position: fixed; z-index:43;width:100%;height:135px;left:633px;top:64px;right:1199px;bottom:199px;background-color: white; padding: 1rem; border-style:dashed;border-color:#FFA600;"><h2>${q}</h2></div>
     `
     return html;
   }
