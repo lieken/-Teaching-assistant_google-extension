@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Arcade Hide Tool",
+  "description": "Arcade Hide Tool",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon/icon.png",
+    "48": "icon/icon.png",
+    "128": "icon/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon/icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://arcade.makecode.com/*"
+      ],
+      "js": [
+        "jquery.min.js","execute.js"
+      ]
+    }
+  ]
+}
